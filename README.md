@@ -27,7 +27,7 @@ Instructions
 
 5. Clone this repository and get right in there
 
-        git clone git@github.com:jlund/docker-chrome-pulseaudio.git && cd docker-chrome-pulseaudio
+        git clone https://github.com/jlund/docker-chrome-pulseaudio.git && cd docker-chrome-pulseaudio
 
 6. Copy your SSH public key into place
 
