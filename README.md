@@ -17,7 +17,7 @@ Instructions
 
         sudo service pulseaudio restart
 
-   You can confirm that the settings have successfully been applied using the `pax11publish` command. You should see something like this (the important part is in bold):
+   On some distributions, it may be necessary to completely restart your computer. You can confirm that the settings have successfully been applied using the `pax11publish` command. You should see something like this (the important part is in bold):
 
    > Server: {ShortAlphanumericString}unix:/run/user/1000/pulse/native **tcp:YourHostname:4713 tcp6:YourHostname:4713**
 
