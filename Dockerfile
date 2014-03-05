@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 
 # Install Chrome dependencies
-RUN apt-get install -y gconf-service libasound2 libatk1.0-0 libcairo2 libcups2 libcurl3 libfontconfig1 libgdk-pixbuf2.0-0 libgtk2.0-0 libnspr4 libnss3 libpango1.0-0 librtmp0 libxss1 libxtst6 xdg-utils
+RUN apt-get install -y gconf-service libasound2 libatk1.0-0 libcairo2 libcap2 libcups2 libcurl3 libfontconfig1 libgdk-pixbuf2.0-0 libgtk2.0-0 libnspr4 libnss3 libpango1.0-0 librtmp0 libxss1 libxtst6 xdg-utils
 
 # Install Chrome
 RUN apt-get install -y ca-certificates wget
