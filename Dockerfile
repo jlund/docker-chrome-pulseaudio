@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:latest
 MAINTAINER Joshua Lund
 
 # Tell debconf to run in non-interactive mode
