@@ -11,9 +11,9 @@ Instructions
 
         sudo apt-get install paprefs
 
-2. Launch PulseAudio Preferences, go to the "Network Server" tab, and check the "Enable network access to local sound devices" checkbox
+1. Launch PulseAudio Preferences, go to the "Network Server" tab, and check the "Enable network access to local sound devices" checkbox
 
-3. Restart PulseAudio
+1. Restart PulseAudio
 
         sudo service pulseaudio restart
 
@@ -23,21 +23,25 @@ Instructions
 
    > Cookie: ReallyLongAlphanumericString
 
-4. [Install Docker](http://docs.docker.io/en/latest/installation/) if you haven't already
+1. [Install Docker](http://docs.docker.io/en/latest/installation/) if you haven't already
 
-5. Clone this repository and get right in there
+1. Clone this repository and get right in there
 
         git clone https://github.com/jlund/docker-chrome-pulseaudio.git && cd docker-chrome-pulseaudio
 
-6. Copy your SSH public key into place
+1. Generate an SSH public key, if you don't already have one
+
+        ssh-keygen
+
+1. Copy your SSH public key into place
 
         cp ~/.ssh/id_rsa.pub .
 
-7. Build the container
+1. Build the container
 
         sudo docker build -t chrome .
 
-8. Create an entry in your .ssh/config file for easy access. It should look like this:
+1. Create an entry in your .ssh/config file for easy access. It should look like this:
         
         Host docker-chrome
           User      chrome
@@ -46,15 +50,15 @@ Instructions
           RemoteForward 64713 localhost:4713
           ForwardX11 yes
 
-9. Run the container and forward the appropriate ports
+1. Run the container and forward the appropriate ports
 
         sudo docker run -d -p 127.0.0.1:2222:22 chrome
 
-10. Connect via SSH and launch Chrome using the provided PulseAudio wrapper script
+1. Connect via SSH and launch Chrome using the provided PulseAudio wrapper script
 
         ssh docker-chrome chrome-pulseaudio-forward
 
-11. Go watch Hulu, or whatever
+1. Go watch Hulu, or whatever
 
 
 Frequently Asked Questions
